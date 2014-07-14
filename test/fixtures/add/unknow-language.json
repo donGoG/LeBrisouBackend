@@ -1,0 +1,25 @@
+{
+  "method": "POST",
+  "url": "/add",
+  "payload": {
+  	"lema" : "b",
+		"pos" : "prep",
+    "gerund": "tata",
+    "participle": "tata",
+		"countries": [{
+        "country" : "Spain",
+        "frequency": 10
+      },
+      {
+        "country" : "Costa Rica",
+        "frequency": 30
+      }],
+		"language": "Español",
+		"definitions": [{
+			"definition": "test definition"
+		},
+		{
+			"definition": "text 2 definition"
+		}]
+  }
+}

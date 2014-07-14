@@ -1,0 +1,52 @@
+
+{
+  "lema": "aa",
+  "pos": "prep",
+  "countries": [{
+    "country": "Spain",
+    "frequency": 10
+  }],
+  "register": true,
+  "language": "Spanish",
+  "definitions": [
+    {
+      "definition": "test definitions",
+      "examples": [
+        "test example"
+      ]
+    },
+    {
+      "definition": "test 2 definitions",
+      "examples": [
+        "test 2 example",
+        "test 3 example"
+      ]
+    }
+  ],
+  "synonyms": [
+    
+    {
+      "lema": "a",
+      "pos": "v"
+    },
+    {
+      "lema": "a",
+      "pos": "prep"
+    }
+  ],
+  "antonyms": [
+    
+    {
+      "lema": "a",
+      "pos": "v"
+    },
+    {
+      "lema": "a",
+      "pos": "prep"
+    }
+  ],
+  "hyperlinks": [
+      "http://fr.wiktionary.org/wiki/bouc_%C3%A9missaire",
+      "http://fr.wiktionary.org/wiki/bouc_%C3%A9missair"
+  ]
+}

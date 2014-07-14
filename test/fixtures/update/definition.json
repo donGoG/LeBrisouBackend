@@ -1,0 +1,11 @@
+{
+	"method": "POST",
+  "url": "/update",
+  "payload": {
+  	"wordId": 1,
+  	"definitions": [{
+  		"id": 1,
+  		"definition": "new definition test"
+  	}]
+  }
+}

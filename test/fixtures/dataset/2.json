@@ -1,0 +1,36 @@
+{
+  "method": "POST",
+  "url": "/add",
+  "payload": {
+      "lema": "abandonar",
+      "pos": "vt",
+      "countries": [{
+        "country" : "Spain",
+        "frequency": 10
+      },
+      {
+        "country" : "Peru",
+        "frequency": 30
+      }],
+      "register": true,
+      "language": "Spanish",
+      "definitions": [
+        {
+          "definition": "Dejar, desamparar a una persona, animal o cosa.\
+          No hacer caso de ella"
+        },
+        {
+          "definition": "Desistir de una cosa"
+        },
+        {
+          "definition": "Renunciar a continuar en una competición o prueba"
+        },
+        {
+          "definition": "Dejar el asegurado por cuenta del esegurador, \
+          relativos a accidentes del comercio marítimo, las cosas aseguradas, \
+          con el fin de obtener el pago del seguro"
+        }
+      ]
+    }
+}
+

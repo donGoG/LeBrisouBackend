@@ -1,0 +1,23 @@
+{
+  "method": "POST",
+  "url": "/add",
+  "payload": {
+  	"lema" : "Cazpdokapozdk",
+		"pos" : "preoijp",
+    "gerund": "tata",
+    "participle": "tata",
+		"countries": [{
+        "country" : "Spain",
+        "frequency": 10
+      },
+      {
+        "country" : "Costa Rica",
+        "frequency": 30
+      }],
+		"language": "Spanish",
+		"antonyms": [{
+			"lema": "DDDDDDDDDDDDDDD",
+			"pos": "qsdqd"
+			}]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "method": "POST",
+  "url": "/add",
+  "payload": {
+  	"lema" : "a",
+		"pos" : "v",
+		"countries": [{
+        "country" : "Spain",
+        "frequency": 10
+      }],
+		"language": "Spanish",
+		"definitions": [{
+			"definition": "test 3 definition"
+		},
+		{
+			"definition": "test 4 definition"
+		}]
+  }
+}

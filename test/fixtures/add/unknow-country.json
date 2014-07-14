@@ -1,0 +1,25 @@
+{
+  "method": "POST",
+  "url": "/add",
+  "payload": {
+  	"lema" : "dddddb",
+		"pos" : "v",
+    "gerund": "tata",
+    "participle": "tata",
+		"countries": [{
+        "country" : "France",
+        "frequency": 10
+      },
+      {
+        "country" : "Costa Rica",
+        "frequency": 30
+      }],
+		"language": "Spanish",
+		"definitions": [{
+			"definition": "test 3 dpopokpokefinition"
+		},
+		{
+			"definition": "text 4 definition"
+		}]
+  }
+}

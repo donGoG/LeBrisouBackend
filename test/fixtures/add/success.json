@@ -1,0 +1,57 @@
+{
+  "method": "POST",
+  "url": "/add",
+  "payload": {
+      "lema": "a",
+      "pos": "prep",
+      "gerund": "tata",
+      "participle": "tata",
+      "countries": [{
+        "country" : "Spain",
+        "frequency": 10
+      },
+      {
+        "country" : "Costa Rica",
+        "frequency": 30
+      }],
+      "register": true,
+      "language": "Spanish",
+      "definitions": [
+        {
+          "definition": "test definitions",
+          "examples": [
+            "test example"
+          ]
+        },
+        {
+          "definition": "test 2 definitions",
+          "examples": [
+            "test 2 example",
+            "test 3 example"
+          ]
+        }
+      ],
+      "relatives": [
+        {
+          "lema" : "a",
+          "pos" : "v"
+        }
+      ],
+      "synonyms": [
+        {
+          "lema" : "a",
+          "pos" : "v"
+        }
+      ],
+      "antonyms": [
+        {
+          "lema" : "a",
+          "pos" : "v"
+        }
+      ],
+      "hyperlinks": [
+          "http://fr.wiktionary.org/wiki/bouc_%C3%A9missaire",
+          "http://fr.wiktionary.org/wiki/bouc_%C3%A9missair"
+      ]
+    }
+}

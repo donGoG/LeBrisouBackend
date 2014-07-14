@@ -1,0 +1,8 @@
+{
+	"method": "POST",
+  "url": "/update",
+  "payload": {
+  	"wordId": 2,
+    "language": "French"
+  }
+}

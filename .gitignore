@@ -1,0 +1,9 @@
+*.sh
+*node_modules*
+logs
+plugins/dictionary-web/public/vendor/
+*.log
+*.sqlite
+*.odt
+doc/doc.pdf
+*sublime-*

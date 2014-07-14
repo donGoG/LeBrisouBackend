@@ -1,0 +1,23 @@
+{
+  "method": "POST",
+  "url": "/add",
+  "payload": {
+  	"lema" : "CCCCC",
+		"pos" : "prep",
+    "gerund": "tata",
+    "participle": "tata",
+		"countries": [{
+        "country" : "Spain",
+        "frequency": 10
+      },
+      {
+        "country" : "Costa Rica",
+        "frequency": 30
+      }],
+		"language": "Spanish",
+		"synonyms": [{
+			"lema": "unknow-synonym",
+			"pos": "yes unknow"
+			}]
+  }
+}

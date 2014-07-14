@@ -1,0 +1,26 @@
+{
+  "method": "POST",
+  "url": "/add",
+  "payload": {
+  	"lema" : "c",
+		"pos" : "v",
+    "gerund" : "tata",
+    "participle": "tata",
+		"countries": [{
+        "country" : "Spain",
+        "frequency": 10
+      },
+      {
+        "country" : "Costa Rica",
+        "frequency": 30
+      }],
+		"language": "Spanish",
+		"definitions": [{
+			"definition": "test 5 definition"
+		}],
+		"hyperlinks": [
+			"http://fr.wiktionary.org/wiki/bouc_%C3%A9missaire",
+			"http://fr.wiktionary.org/wiki/bouc_%C3%A9missaire"
+		]
+  }
+}

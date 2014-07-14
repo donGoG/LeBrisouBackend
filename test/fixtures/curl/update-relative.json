@@ -1,0 +1,13 @@
+{
+	"wordId": 1,
+	"relatives": [{
+		"id": 1,
+		"lema": "a",
+		"pos": "v"
+	},
+	{
+		"id": 2,
+		"lema": "a",
+		"pos": "prep"
+	}]
+}

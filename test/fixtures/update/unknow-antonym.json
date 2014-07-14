@@ -1,0 +1,12 @@
+{
+	"method": "POST",
+  "url": "/update",
+  "payload": {
+  	"wordId": 1,
+  	"antonyms": [{
+  		"id": 100,
+  		"lema": "new",
+  		"pos": "new "
+  	}]
+  }
+}

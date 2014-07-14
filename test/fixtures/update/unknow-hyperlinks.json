@@ -1,0 +1,12 @@
+{
+	"method": "POST",
+  "url": "/update",
+  "payload": {
+  	"wordId": 1,
+    "hyperlinks": [
+    {
+    	"id": 1,
+    	 "hyperlink": "http://bonjour.com"
+    }]
+  }
+}

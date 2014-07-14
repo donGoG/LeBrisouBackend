@@ -1,0 +1,29 @@
+{
+  "lema": "a",
+  "pos": "prep",
+  "countries": [{
+    "country": "Spain",
+    "frequency": 10
+  }],
+  "register": true,
+  "language": "Spanish",
+  "definitions": [
+    {
+      "definition": "tt 3 definitions",
+      "examples": [
+        "test 4 example"
+      ]
+    },
+    {
+      "definition": "test 4finitions",
+      "examples": [
+        "test 5 example",
+        "test 6 example"
+      ]
+    }
+  ],
+  "hyperlinks": [
+      "http://fr.wiktionary.org/wiki/bouc_%C3%A9mssa",
+      "http://fr.wiktionary.org/wiki/bouc_%C3%Aissai"
+  ]
+}

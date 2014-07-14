@@ -1,0 +1,11 @@
+{
+	"method": "POST",
+  "url": "/update",
+  "payload": {
+  	"wordId": 1,
+    "countries": [{
+      "country" : "Peru",
+      "frequency": 20
+    }]
+  }
+}

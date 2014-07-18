@@ -1,7 +1,7 @@
 boilerplate !
 
 
-##[Error code](/plugins/dictionary-error)
+##[Error code](https://github.com/amaurybrisou/dictionary-error)
 
 
 ##INSTALL

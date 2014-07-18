@@ -12,8 +12,10 @@ Lab.experiment("Add", function() {
   Lab.before(function (done) {
     server = new Server()
 
+
+    options.headers = headers
     // Wait 1 second
-    setTimeout(function () { done() }, 5000)
+    setTimeout(function () { done() }, 1000)
   })
 
   Lab.beforeEach(function (done) {
@@ -155,8 +157,8 @@ Lab.experiment("Add", function() {
 
 
   Lab.test("Raise unknow field", function (done) {
-    options.method = "POST",
-    options.url = '/add',
+    options.method = "PUT",
+    options.url = '/api',
     options.payload = {
         word: "bonjour",
       }

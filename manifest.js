@@ -1,14 +1,23 @@
+var fs = require('fs')
+
 module.exports = {
 	"pack" : {
-		"cache" : "catbox-memory"
+		'cache': 'catbox-memory'
 	},
 	"servers" : [
 		{
 			"port" : 8081,
 			// "host" : "dic.local",
 			"options": {
+				"tls": {
+				  'key': fs.readFileSync( __dirname + '/plugins/dictionary-api/cert/server.key'),
+				  'cert': fs.readFileSync(__dirname + '/plugins/dictionary-api/cert/server.crt')
+				},
 	      "labels": "dictionary-api",
-	      "cors": true
+	      "cors": true,
+	      "debug": {
+	      	'request' : ['error', 'uncaught', 'log']
+	      }
 	    }
 		},
 		{
@@ -19,12 +28,21 @@ module.exports = {
 		}
 	],
 	"plugins" : {
-		"../../../node_modules/good" : {
-			"console" : 											 ["request", "log", "error"],
-			
-      '/logs/':                      ['request', 'log', 'error'],
-      
-		},
+		"../../../node_modules/good" : [
+			{
+				'options': {
+					'extendedRequests': true,
+					// 'requestsEvent': 'response',
+					'subscribers': {
+						"console" : ['request', 'log', 'error'],
+						'logs/requests.log':    ['request'],
+						'logs/errors.log':    ['error'],
+						'logs/log.log':    ['log'],
+						'logs/ops.log':    ['ops'],
+					}
+				}
+			}
+		],
 		"../../../node_modules/lout": { 
 			"endpoint": "/docs" 
 		},
@@ -32,21 +50,9 @@ module.exports = {
 		  "endpoint": "/debug/console",
 		  "queryKey": "debug"
 		},
-		"../../../plugins/hapi-winston" : [
-			{
-				"options" : {
-					'level': 'debug',
-					'path': __dirname + '/logs',
-					'json': true,
-					'colorize': true,
-					'timestamp': true
-				}
-			}
-		],
 		"../../../plugins/hapi-sequelize" : [
 			{
 				"options" : {
-					"ready_timeout": 0,
 			    "dialect": "sqlite", // or 'sqlite', 'postgres', 'mariadb'
 			    //port:    5432, // or 5432 (for postgres)
 			    "storage":  __dirname + '/plugins/dictionary-rdbms/LeBrisou.sqlite',
@@ -60,8 +66,8 @@ module.exports = {
 			      "syncOnAssociation": true,
 			      "charset": 'utf8',
 			      "collate": 'utf8_general_ci',
-			      // classMethods: {method1: function() {}},
-			      // instanceMethods: {method2: function() {}},
+			      // 'classMethods': {method1: function() {}},
+			      // 'instanceMethods': {method2: function() {}},
 			      "timestamps": true
 			    },
 			    "pool": { "maxConnections": 1, "maxIdleTime": 30}, //currently useless for sqlite maybe in another version
@@ -72,7 +78,8 @@ module.exports = {
 		"../../../plugins/dictionary-rdbms" : [
 			{
 				"options" : {
-					"drop": true
+					"drop": false,
+					'sync': {'force': true }
 				},
 				"select" : ["dictionary-api"]
 			}
@@ -81,7 +88,7 @@ module.exports = {
 			{
 				"select" : ["dictionary-api"],
 				"route": {
-					"prefix" : "/dic",
+					"prefix" : "/api",
 					// "vhost" : "dic.local"
 				}
 			}
@@ -91,6 +98,20 @@ module.exports = {
 				"select" : ["dictionary-web"]
 			}
 		],
-		
+		"../../../plugins/dictionary-parser" : [
+			{
+				'options' : {
+					'inject': false,
+					'sheets' : ['AB', 'C', 'D'],
+					'input' :  __dirname + '/assets/input/dictionary_database.xlsx',
+					'output' : __dirname + '/assets/output/excel_dump.json'
+				},
+				"select" : ["dictionary-api"]
+			}
+		],
+		"../../../plugins/dictionary-error" : [
+			{
+			}
+		],
 	}
 }

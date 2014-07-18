@@ -7,3 +7,4 @@ plugins/dictionary-web/public/vendor/
 *.odt
 doc/doc.pdf
 *sublime-*
+LeBrisouBackend*

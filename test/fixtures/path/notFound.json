@@ -1,4 +1,4 @@
 {
-	"method": "POST",
-  "url": "/inconnu"
+	"method": "DELETE",
+  "url": "/api"
 }

@@ -1,6 +1,6 @@
 {
-  "method": "POST",
-  "url": "/add",
+  "method": "PUT",
+  "url": "/api",
   "payload": {
   	"lema" : "a",
 		"pos" : "v",

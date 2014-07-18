@@ -14,11 +14,11 @@ var next = function(err, pack){
   process.on('SIGINT', stop)
   process.on('uncaughtException', stop)
 
+  
+
  	pack.start(function(err){
 		pack.log(['info'], 'Servers started')
 	})
-
-	return pack
 }
 
 var Hapi = require('hapi'),

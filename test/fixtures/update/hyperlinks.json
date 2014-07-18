@@ -1,6 +1,6 @@
 {
 	"method": "POST",
-  "url": "/update",
+  "url": "/api",
   "payload": {
   	"wordId": 2,
     "hyperlinks": [

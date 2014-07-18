@@ -1,4 +1,4 @@
 {
-	"method": "PUT",
-  "url": "/add"
+	"method": "OPTIONS",
+  "url": "/api"
 }

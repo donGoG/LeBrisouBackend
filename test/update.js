@@ -1,15 +1,16 @@
 var Lab = require("lab"),
-		Server = require("../app"),
+    Server = require("./test_srv"),
     fixtures = require('./fixtures'),
     headers = require('./fixtures/headers')
 
 
 Lab.experiment("Update", function() {
-  var options = {}, server  
-  var delay = 0
+  var options = {},
+      server,
+      delay = 0
 
   Lab.before(function (done) {
-    server = new Server.api_server()
+    server = new Server()
 
     options.headers = headers
 

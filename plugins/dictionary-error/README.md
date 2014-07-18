@@ -1,1 +1,0 @@
-LeBrisouBackend Error Handling Hapi plugin

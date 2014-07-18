@@ -1,1 +1,0 @@
-LeBrisouBackend dictionary parser plugin

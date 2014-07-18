@@ -22,7 +22,7 @@
   },
   "main": "app.js",
   "engines": {
-    "node": ">= 0.10.25"
+    "node": ">= 0.10.29"
   },
   "scripts": {
     "start-dev": "config='/config/config-dev' supervisor --extensions js,node,html,json nodejs app.js",

@@ -1,5 +1,7 @@
 var fs = require('fs')
 
+domain = 'puzzledge.eu'
+
 module.exports = {
 	"pack" : {
 		'cache': 'catbox-memory'
@@ -10,8 +12,8 @@ module.exports = {
 			// "host" : "dic.local",
 			"options": {
 				"tls": {
-				  'key': fs.readFileSync( __dirname + '/plugins/dictionary-api/cert/server.key'),
-				  'cert': fs.readFileSync(__dirname + '/plugins/dictionary-api/cert/server.crt')
+				  'key': fs.readFileSync( __dirname + '/plugins/dictionary-api/cert/'+domain+'.key'),
+				  'cert': fs.readFileSync(__dirname + '/plugins/dictionary-api/cert/'+domain+'.crt')
 				},
 	      "labels": "dictionary-api",
 	      "cors": true,

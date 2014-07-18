@@ -13,3 +13,6 @@
 [submodule "plugins/hapi-sequelize"]
 	path = plugins/hapi-sequelize
 	url = git@github.com:amaurybrisou/hapi-sequelize.git
+[submodule "plugins/dictionary-rdbms"]
+	path = plugins/dictionary-rdbms
+	url = git@github.com:amaurybrisou/dictionary-rdbms.git

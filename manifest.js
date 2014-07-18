@@ -59,7 +59,7 @@ module.exports = {
 			    //port:    5432, // or 5432 (for postgres)
 			    "storage":  __dirname + '/plugins/dictionary-rdbms/LeBrisou.sqlite',
 			    "sync": { "force" : true },
-			    "logging": false,//console.log,
+			    "logging": console.log,
 			    "maxConcurrentQueries": 1,
 			    "native": true,
 			    "define": {

@@ -1,0 +1,15 @@
+[submodule "plugins/dictionary-parser"]
+	path = plugins/dictionary-parser
+	url = git@github.com:amaurybrisou/dictionary-parser.git
+[submodule "plugins/dictionary-error"]
+	path = plugins/dictionary-error
+	url = git@github.com:amaurybrisou/dictionary-error.git
+[submodule "plugins/dictionary-api"]
+	path = plugins/dictionary-api
+	url = git@github.com:amaurybrisou/dictionary-api.git
+[submodule "plugins/dictionary-web"]
+	path = plugins/dictionary-web
+	url = git@github.com:amaurybrisou/dictionary-web.git
+[submodule "plugins/hapi-sequelize"]
+	path = plugins/hapi-sequelize
+	url = git@github.com:amaurybrisou/hapi-sequelize.git

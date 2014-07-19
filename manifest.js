@@ -97,7 +97,11 @@ module.exports = {
 		],
 		"../../../plugins/dictionary-web" : [
 			{
-				"select" : ["dictionary-web"]
+				'options': {
+					'sitename': 'LeBrisouBackend',
+					'author': 'Amaury Brisou'
+				},
+				'select': ['dictionary-web']
 			}
 		],
 		"../../../plugins/dictionary-parser" : [

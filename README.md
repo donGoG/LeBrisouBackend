@@ -12,6 +12,6 @@ boilerplate !
 		you can specify custom fields for your certs in install.sh
 		
 		
-##NORME
+##ID NORME
 		recursively : first letter of key + id
 		ex. : w1d1e1 for word 1 / definition 1 / example 1

@@ -1,6 +1,6 @@
 var fs = require('fs')
 
-domain = 'localhost'
+var domain = 'localhost'
 
 module.exports = {
 	pack : {

@@ -1,0 +1,12 @@
+{
+	"method": "POST",
+  "url": "/api",
+  "payload": {
+  	"wordId": 1,
+  	"relatives": [{
+  		"id": 100,
+  		"lema": "new",
+  		"pos": "new "
+  	}]
+  }
+}

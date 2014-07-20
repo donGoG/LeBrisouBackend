@@ -25,16 +25,16 @@
     "node": ">= 0.10.29"
   },
   "scripts": {
-    "start-dev-front": "config='/config/config-dev' supervisor --extensions node,json nodejs app.js",
-    "start-dev": "config='/config/config-dev' supervisor --extensions node,js,json nodejs app.js",
+    "start-dev-front": " supervisor --extensions node,json nodejs app.js",
+    "start-dev": " supervisor --extensions node,js,json nodejs app.js",
     "start": "config='/config/config-prod' forever app.js",
     "test": "lab -C -v",
-    "test-add": "config='/config/config-prod' lab -C -v -g Add",
-    "test-dev": "config='/config/config-dev' lab -C -v",
-    "test-update-dev": "config='/config/config-dev' lab -g Update -C -v",
-    "test-add-dev": "config='/config/config-dev' lab -C -v -g Add",
-    "test-cover": "config='/config/config-prod' lab -C -c -v",
-    "test-html": "config='/config/config-prod' lab -C -c -v -r html "
+    "test-add": "lab -C -v -g Add",
+    "test-dev": " lab -C -v",
+    "test-update-dev": " lab -g Update -C -v",
+    "test-add-dev": " lab -C -v -g Add",
+    "test-cover": "lab -C -c -v",
+    "test-html": "lab -C -r html -o test-report.html "
   },
   "dependencies": {
     "hapi": "~6.0.2",
@@ -49,7 +49,6 @@
   },
   "devDependencies": {
     "supervisor": "0.6.x",
-    "joi": "~4.6.1",
     "lab": "~3.2.1"
   }
 }

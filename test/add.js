@@ -10,7 +10,7 @@ Lab.experiment("Add", function() {
       delay = 0
 
   Lab.before(function (done) {
-    server = new Server()
+    server = new Server.getServer()
 
 
     options.headers = headers

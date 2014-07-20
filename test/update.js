@@ -10,7 +10,9 @@ Lab.experiment("Update", function() {
       delay = 0
 
   Lab.before(function (done) {
-    server = new Server()
+    Server.options[1].options.drop = false 
+    
+    server = new Server.getServer()
 
     options.headers = headers
 
@@ -67,7 +69,7 @@ Lab.experiment("Update", function() {
       var result = response.result
       var payload = options.payload
       
-      Lab.expect(result.error).to.be.true
+      Lab.expect(result.error).to.be.equal('Bad Request')
       setTimeout(done, delay)
     
     })
@@ -115,7 +117,7 @@ Lab.experiment("Update", function() {
       var result = response.result
       var payload = options.payload
       
-      Lab.expect(result.error).to.be.true
+      Lab.expect(result.error).to.be.equal('Bad Request')
       setTimeout(done, delay)
     
     })
@@ -148,7 +150,7 @@ Lab.experiment("Update", function() {
       var result = response.result
       var payload = options.payload
       
-      Lab.expect(result.error).to.be.true
+      Lab.expect(result.error).to.be.equal('Bad Request')
       setTimeout(done, delay)
     
     })
@@ -164,7 +166,7 @@ Lab.experiment("Update", function() {
       var result = response.result
       var payload = options.payload
       
-      Lab.expect(result.error).to.be.true
+      Lab.expect(result.error).to.be.equal('Bad Request')
       setTimeout(done, delay)
     
     })
@@ -179,6 +181,38 @@ Lab.experiment("Update", function() {
 
       var result = response.result
       var payload = options.payload
+      
+      Lab.expect(result.success).to.be.true
+      setTimeout(done, delay)
+    
+    })
+  })
+
+  Lab.test("Unknow Relatives", function(done) {
+    options = fixtures.load('update/unknow-relatives', options)
+
+    server.inject(options, function(response) {
+
+      Lab.expect(response.statusCode).to.equal(20004)
+
+      var result = response.result
+      var payload = options.payload
+      
+      Lab.expect(result.error).to.be.equal('Bad Request')
+      setTimeout(done, delay)
+    
+    })
+  })
+
+  Lab.test("Relatives", function(done) {
+    options = fixtures.load('update/relatives', options)
+
+    server.inject(options, function(response) {
+
+      Lab.expect(response.statusCode).to.equal(200)
+
+      var result = response.result
+
       
       Lab.expect(result.success).to.be.true
       setTimeout(done, delay)
